@@ -1,0 +1,386 @@
+.page-header__t
+  padding 5px 0
+  padding-right 17.4%
+  
+  background-color #4a2fa6
+  .container
+    display flex
+  ul
+    reset-list()
+    
+    flex-grow 1
+    display flex
+    justify-content space-between
+    margin-right: 1.29%;
+    padding 10px 0
+    padding-left: 2.1%;
+    padding-right: 2.4%;
+    
+    border-right 1px solid #8937df
+    li
+      display flex
+      align-items center
+      &:nth-child(4)
+        span
+          .discount-voucher
+            fill #fef035
+        a
+          color #fef035
+          &::after
+            background-color #fef035
+          &:hover
+            color #ffffff
+      div
+        display flex
+      p
+        reset()
+        font('HelveticaNeueCyr', 17px, 20px, 400, #ffffff)
+      a
+        font('HelveticaNeueCyr', 17px, 20px, 400, #ffffff)
+        
+        position relative
+        display inline-block
+        margin-left 5px
+        padding-bottom 3px
+        
+        text-decoration none
+        
+        transition 0.3s ease
+        &::after
+          content ''
+          
+          position absolute
+          left 0
+          bottom 0
+          
+          width 100%
+          height 1px
+          
+          background-color #ffffff
+          
+          transition 0.3s ease
+        &:hover
+          &::after
+            width 0
+            
+            opacity 0
+      span
+        display block
+        width 28px
+        height 28px
+        margin-right 10px
+        .placeholder,
+        .factory,
+        .delivery-truck,
+        .discount-voucher,
+        .wallet,
+        .like
+          width 28px
+          height 28px
+          
+          fill #ffffff
+          
+.page-header__m
+  padding 15px 0
+  
+  background-color #4e5d1f
+  background-image url('%=static=%content/header-bg.jpg')
+  background-repeat no-repeat
+  background-size cover
+  .container
+    display flex
+    
+.page-header__m-b
+  &:nth-child(1)
+    padding 17px 0
+    padding-left 2.4%
+    padding-right: 4%;
+    
+    border-right 1px solid #919191
+  &:nth-child(2)
+    flex-grow 1
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width 20%
+  &:nth-child(3)
+    margin-right 20%
+    padding 17px 0
+    padding-left 2.4%
+    
+    border-left 1px solid #919191
+    p
+      reset()
+      font('LetoSans', 37px, 44px, 700, #fff200)
+      &:nth-child(2)
+        margin-bottom 12px
+        
+        font-family 'FuturisXC', sans-serif
+        font-size 85px
+        line-height 101px
+      &:nth-child(3)
+        font-size 21px
+        line-height 25px
+        
+.page-header__m-b-slider
+  position relative
+  .owl-nav
+    center-absolute()
+    
+    box-sizing border-box
+    display flex
+    justify-content space-between
+    height 32px
+    padding 0 25px
+  .owl-dot
+    transform: translateY(30px);
+    &.active
+      span
+        background #ea1f4b !important
+        
+.page-header__m-b-slider-slide
+  display flex
+  justify-content center
+  align-items center
+  div
+    width 128px
+    margin-right 22px
+  h2
+    reset()
+    font('LetoSans', 43px, 51px, 700, #ffffff)
+    
+    width 470px
+    
+.page-header__con
+  position relative
+  
+.page-header__b
+  nav
+    padding 12px 70px
+    padding-bottom 0
+  .border
+    width 100%
+    height 8px
+
+    background-color #efefef
+    
+    transform: translateY(-8px);
+    
+.page-header__b-slider
+  position relative
+  .owl-stage-outer
+    position relative
+    z-index 10
+    
+    padding-bottom 20px
+  .owl-nav
+    center-absolute()
+    
+    top -20px
+    left -32px
+    right -32px
+    z-index 5
+    
+    display flex
+    justify-content space-between
+    height 32px
+    .owl-prev,
+    .owl-next
+      &::before,
+      &::after
+        transition 0.2s ease
+      &:hover
+        &::before,
+        &::after
+          background #6a47f3 !important
+    
+.page-header__b-slider-slide
+  a
+    font('SFUIDisplay', 21px, 25px, 700, #a9aaa9)
+    
+    position relative
+    display block
+    
+    text-align center
+    text-decoration none
+    
+    transition 0.2s ease
+    &::after
+      content ''
+      
+      position absolute
+      left 0
+      bottom -20px
+      
+      width 100%
+      height 8px
+      
+      background-color transparent
+    &:hover
+      color #6a47f3
+    &.active
+      color #6a47f3
+      &::after
+        background-color #6a47f3
+        
+@media(max-width 1830px)
+  .page-header__t
+    padding-right: 19.4%;
+    
+  .page-header__t ul
+    padding-left: 0
+    
+@media(max-width 1770px)  
+  .page-header__t
+    padding-right 0
+    
+  .page-header__m-b:nth-child(3)
+    margin-right: 2.4%;
+    
+@media(max-width 1430px)
+  .page-header__m-b:nth-child(1)
+    padding-left: 0;
+    padding-right: 1%;
+    
+  .page-header__m-b:nth-child(3)
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 0;
+    padding-left: 1%;
+    
+  .page-header__m-b:nth-child(3) p
+    font-size: 28px;
+    line-height: 32px;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(2)
+    font-size: 57px;
+    line-height: 61px;
+    margin-bottom: 2px;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(3)
+    font-size: 18px;
+    line-height: 22px;
+    
+@media(max-width 1260px)
+  .page-header__m-b-slider-slide h2
+    font-size: 34px;
+    line-height: 38px;
+    text-align center
+    
+  .page-header__m-b-slider-slide div
+    display none
+    
+@media(max-width 1170px)
+  .page-header__t ul li span
+    display none
+    
+@media(max-width 1000px)
+  .page-header__b nav
+    padding-left: 50px;
+    padding-right: 50px;
+    
+@media(max-width 940px)
+  .page-header
+    padding-top: 54px;
+  
+  .page-header__t
+    padding: 11px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+  
+  .page-header__t .container
+    justify-content: flex-end;
+    
+  .page-header__t ul
+    display: none;
+    
+  .page-header__m .container
+    flex-direction: column-reverse;
+    
+  .page-header__m-b:nth-child(1)
+    display: none;
+    
+  .page-header__m-b:nth-child(2)
+    width: 100%;
+    flex-grow: 0;
+    
+  .page-header__m-b:nth-child(3)
+    padding: 0;
+    border-left: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(2)
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+  .page-header__m-b-slider .owl-dot
+    transform: translateY(0);
+    
+@media(max-width 560px)
+  .page-header__m-b-slider-slide h2
+    font-size: 18px;
+    line-height: 22px;
+    
+  .page-header__m-b:nth-child(3) p
+    font-size: 17px;
+    line-height: 21px;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(2)
+    font-size: 27px;
+    line-height: 31px;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(3)
+    font-size: 15px;
+    line-height: 19px;
+  
+  .page-header__m-b-slider .owl-nav
+    top: -27px;
+  
+  .page-header__m-b-slider
+    .owl-dots
+      transform: translateY(10px);
+      
+  .page-header__m
+    background-image url('%=static=%content/header-bg-mobile.jpg')
+    
+  .page-header__m-b-slider .owl-nav
+    padding 0
+    
+@media(max-width 360px)
+  .page-header__m-b-slider-slide h2
+    font-size: 17px;
+    line-height: 21px;
+    
+  .page-header__m-b:nth-child(3) p
+    font-size: 15px;
+    line-height: 19px;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(2)
+    font-size: 23px;
+    line-height: 27px;
+    
+@media(max-width 320px)
+  .page-header__m-b-slider .owl-nav
+    display: none;
+    
+  .page-header__m-b:nth-child(3) p:nth-child(3)
+    font-size: 12px;
+    line-height: 16px;
+    
+  .page-header__b nav
+    padding-left: 41px;
+    padding-right: 41px;
+    
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,95 @@
+.goods__content
+  display flex
+  flex-wrap wrap
+  margin-bottom 20px
+  padding-top 60px
+  padding-bottom 19px
+  padding-right: 15px;
+  padding-left: 15px;
+  
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  .good
+    width: 21.22%;
+    margin-right: 4.9%;
+    &:nth-child(4n)
+      margin-right 0
+      
+@media(max-width 1700px)
+  .goods__content
+    .good
+      width: 23.2%;
+      margin-right: 2.2%;
+      padding-left: 1.4%;
+      padding-right: 1.4%;
+    .good div.price div
+      margin-right: 10px;
+      
+@media(max-width 1430px)
+  .goods__content
+    padding-bottom 0
+    .good
+      width: 31.1%;
+      margin-right: 3.2%;
+      margin-bottom 65px
+      &:nth-child(3n)
+        margin-right 0
+      &:nth-child(4n)
+        margin-right: 3.2%;
+        
+@media(max-width 1030px)
+  .goods__content .good
+    padding-left: 2.4%;
+    padding-right: 2.4%;
+    
+  .goods__content
+    .good div.price div p
+      font-size: 38px;
+      line-height: 42px;
+    .good div.price div p:nth-child(2)
+      font-size: 22px;
+      line-height: 26px;
+      transform: translateY(-3px);
+    .good div.price button
+      font-size: 16px;
+      line-height: 20px;
+    .good a
+      font-size: 18px;
+      line-height: 22px;
+      
+@media(max-width 940px)
+  .goods__content .good
+    width 47.7%
+    margin-right: 4.2%;
+    &:nth-child(2n)
+      margin-right: 0
+    &:nth-child(3n)
+      margin-right: 4.2%;
+    &:nth-child(6n)
+      margin-right: 4.2%;
+      
+@media(max-width 730px)
+  .goods__content .good div.calculation
+    top: 32px;
+    
+@media(max-width 630px)
+  .goods__content
+    padding-left 0
+  
+  .goods__content .good
+    width 100%
+    margin-right 0 !important
+    &:last-child
+      margin-bottom 0
+      
+@media(max-width 320px)
+  .goods__content .good div.price div p
+    font-size: 24px;
+    line-height: 28px;
+    
+  
+  
+  
+  
+  
+  

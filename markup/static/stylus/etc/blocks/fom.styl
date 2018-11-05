@@ -1,0 +1,324 @@
+.fom
+  background-color #fdf9f1
+  &--reviews
+    .fom__rt
+      padding-bottom 0
+    .fom__rb
+      padding-top 0
+      
+      border-top none
+    .fom__rt ul.input li textarea
+      height 123px
+    .fom__rt ul.input li
+      &:nth-child(3)
+        span
+          bottom auto
+          
+          margin 0
+  
+.fom__rt
+  padding-top 12px
+  padding-bottom 30px
+  
+  border-top 1px solid #dcdcdc
+  h2
+    reset()
+    font('Circe', 37px, 44px, 700, #222222)
+    
+    margin-bottom 25px
+    
+    text-align center
+  ul
+    &.prefer
+      reset-list()
+      
+      display flex
+      flex-wrap wrap
+      max-width 465px
+      margin 0 auto
+      li
+        position relative
+        
+        cursor pointer
+        &:nth-child(1)
+          margin-right 45px
+        &:nth-child(3)
+          width 100%
+          margin-top 30px
+        input
+          hidden()
+        p
+          reset()
+          font('Circe', 19px, 23px, 400, #808080)
+          
+          padding-left 39px
+        span
+          position absolute
+          top 0
+          left 0
+          bottom 0
+          
+          box-sizing border-box
+          display block
+          width 24px
+          height 24px
+          margin auto
+          
+          border 2px solid #26bb38
+          border-radius 5px
+          &::before
+            center-absolute()
+            bgi(17px, 13px)
+            
+            content ''
+            
+            display none
+            
+            background-image url('%=static=%content/check-mark.svg')
+          &.check
+            background-color #26bb38
+            &::before
+              display block
+    &.input
+      reset-list()
+
+      max-width 500px
+      margin 0 auto
+      margin-bottom 35px
+      li
+        position relative
+
+        margin-bottom 28px
+        &:last-child
+          margin-bottom 0
+        textarea
+          reset-input()
+          font('SFUIDisplay', 19px, 23px, 400, #808080)
+
+          box-sizing border-box
+          height 50px
+          padding: 11px 15px;
+          padding-top: 12px;
+
+          text-align center
+
+          background-color #ffffff
+
+          border 2px solid #e1e3e6
+
+          resize none
+
+          transition 0.2s ease
+          &:hover
+            border-color #9bf99c
+          &:focus
+            border-color #9bf99c
+        span
+          position absolute
+          top 0
+          left -42px
+          bottom 0
+
+          display block
+          width 32px
+          height 32px
+          margin auto
+          .fom-icon1,
+          .fom-icon2,
+          .fom-icon3,
+          .fom-icon4
+            width 32px
+            height 32px
+
+            fill #d4d4d4
+        input
+          reset-input()
+          font('SFUIDisplay', 19px, 23px, 400, #808080)
+
+          padding: 11px 15px;
+          padding-top: 12px;
+
+          text-align center
+
+          background-color #ffffff
+
+          border 2px solid #e1e3e6
+
+          transition 0.2s ease
+          &:hover
+            border-color #9bf99c
+          &:focus
+            border-color #9bf99c
+  
+.fom__totPrice
+  display flex
+  justify-content center
+  margin-bottom 20px
+  p
+    &.text
+      reset()
+      font('Circe', 37px, 44px, 700, #f73e34)
+      
+      margin-right 10px
+  div
+    display flex
+    p
+      reset()
+      font('Circe', 37px, 44px, 700, #f73e34)
+      &:nth-child(2)
+        margin-left 5px
+        
+        font-size 27px
+        line-height 32px
+        
+        align-self: flex-end;
+        transform: translateY(-5px);
+        
+.fom__rb
+  padding-top 25px
+  padding-bottom 30px
+  
+  border-top 1px solid #dcdcdc
+  div
+    &.privacy
+      position relative
+      
+      max-width 820px
+      margin 0 auto
+      
+      cursor pointer
+      input
+        hidden()
+      p
+        reset()
+        font('SFUIDisplay', 15px, 18px, 400, #373535)
+        
+        padding-left 35px
+        a
+          font('SFUIDisplay', 15px, 18px, 400, #373535)
+          
+          margin-left 5px
+      span
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        
+        box-sizing border-box
+        display block
+        width 24px
+        height 24px
+        margin auto
+        
+        border 2px solid #9bf99c
+        border-radius 50%
+        &::before
+          center-absolute()
+          bgi(17px, 13px)
+
+          content ''
+
+          display none
+
+          background-image url('%=static=%content/check-mark.svg')
+        &.check
+          background-color #9bf99c
+          &::before
+            display block
+    &.button
+      max-width 495px
+      margin 0 auto
+      margin-bottom 38px
+      button
+        reset-button()
+        font('SFUIDisplay', 21px, 25px, 400, #ffffff)
+
+        width 100%
+        padding: 11px 10px;
+        padding-bottom: 14px;
+
+        text-align center
+
+        background-color #26bb38
+
+        border-radius 5px
+
+        transition 0.2s ease
+        &:hover
+          background-color #20a12f
+          
+@media(max-width 620px)
+  .fom__rt ul.input
+    width: 100%;
+    max-width: 100%;
+    
+  .fom__rt ul.input li span
+    display: none;
+    
+@media(max-width 480px)
+  .fom__rt
+    padding-bottom: 0px;
+    
+  .fom__totPrice
+    margin-bottom: 0px;
+    
+  .fom__totPrice p.text
+    font-size: 24px;
+    line-height: 28px;
+    
+  .fom__totPrice div p
+    font-size: 24px;
+    line-height: 28px;
+    
+  .fom__totPrice div p:nth-child(2)
+    font-size: 18px;
+    line-height: 22px;
+    transform: translateY(-2px);
+    
+  .fom__rt h2
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    
+  .fom__rt ul.input
+    margin-bottom: 15px;
+    
+  .fom__rt ul.input li
+    margin-bottom: 12px;
+    
+  .fom__rt ul.prefer
+    flex-direction: column;
+    
+  .fom__rt ul.prefer li
+    margin-bottom: 15px;
+    
+  .fom__rt ul.prefer li:nth-child(1)
+    margin-right: 0;
+    
+  .fom__rt ul.prefer li:nth-child(3)
+    margin-top: 0;
+    
+  .fom__rb
+    padding-top: 10px;
+    padding-bottom: 19px;
+    
+  .fom__rb div.button
+    margin-bottom: 10px;
+    
+  .fom__rb div.privacy p
+    font-size: 13px;
+    line-height: 17px;
+    
+  .fom__rt ul.prefer li p
+    font-size: 16px;
+    line-height: 20px;
+        
+        
+        
+        
+        
+        
+        
+
+
+      

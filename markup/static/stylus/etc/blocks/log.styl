@@ -1,0 +1,90 @@
+.log
+  p
+    reset()
+    font('HelveticaNeueCyr', 21px, 25px, 400, #fff200)
+    &.title
+      margin-bottom 10px
+    &.work
+      padding-bottom 7px
+      
+      border-bottom 1px solid #fef035
+  &--footer
+    margin-bottom 15px
+      
+.log__img
+  display flex
+  align-items center
+  margin-bottom 10px
+  h2
+    reset()
+    font('FuturisXC', 48px, 57px, 400, #fff200)
+    
+    width 205px
+    
+    text-align center
+      
+.log__img-wrap
+  width 90px
+  margin-right 8px
+  
+@media(max-width 1430px)
+  .log--header p.title
+    font-size: 16px;
+    line-height: 21px;
+    
+  .log--header .log__img-wrap
+    width: 70px
+    
+  .log--header .log__img h2
+    font-size: 37px;
+    line-height: 41px;
+    width: 171px;
+    
+    .log--header p.work
+      padding-bottom: 2px;
+      display: inline-block;
+      
+@media(max-width 1200px)
+  .log.log--footer
+    .log__img-wrap
+      width: 70px;
+    .log__img h2
+      width: 125px;
+      font-size: 28px;
+      line-height: 32px;
+      
+@media(max-width 1000px)
+  .log--footer
+    margin-bottom: 0;
+    
+@media(max-width 590px)
+  .log--footer
+    margin-bottom: 15px;
+    
+  .log--footer p.title
+    text-align: center;
+    
+  .log__img
+    justify-content: center;
+    
+  .log.log--footer .log__img h2
+    width: auto;
+    
+  .log--footer p.work
+    text-align: center;
+    
+@media(max-width 320px)
+  .log.log--footer .log__img h2
+    font-size: 20px;
+    line-height: 24px;
+      
+      
+      
+      
+      
+      
+    
+    
+    
+    
+    

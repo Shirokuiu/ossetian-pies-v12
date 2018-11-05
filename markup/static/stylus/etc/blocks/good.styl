@@ -1,0 +1,214 @@
+.good
+  position relative
+  
+  box-sizing border-box
+  padding: 0 1.75%
+  padding-top 43px
+  padding-bottom 15px
+  
+  background-color #fff9ee
+  
+  border 2px solid #dcdcdc
+  border-radius 5px
+  
+  transition 0.2s ease
+  &:hover
+    border-color #1fc2ca
+  div
+    &.calculation
+      position absolute
+      top 62px
+      right -23px
+      
+      margin auto
+      
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      div
+        order 2
+        display flex
+        flex-direction column
+        align-items center
+        box-sizing border-box
+        width 43px
+        height 65px
+        margin 8px 0
+        padding-top 4px
+        
+        background-color #ffffff
+
+        border 1px solid #1fc2ca
+        border-radius 5px
+        p
+          reset()
+          font('SFUIDisplay', 29px, 34px, 400, #222222)
+
+          text-align center
+          &:nth-child(2)
+            font-size 16px
+            line-height 19px
+      button
+        reset-button()
+        
+        position relative
+        
+        width 43px
+        height 39px
+        
+        background-color #1fc2ca
+        
+        border-radius 5px
+        
+        transition 0.2s ease
+        &:active
+          background-color #189ea5
+        &::before,
+        &::after
+          center-absolute()
+          
+          content ''
+          
+          width 61%
+          height 2px
+          
+          background-color #cff2f4
+        &::before
+          transform rotate(90deg)
+        &.plus
+          order 1
+        &.minus
+          order 3
+          &::before
+            display none
+  a
+    font('Circe', 24px, 29px, 400, #3a3a3a)
+    
+    display block
+    
+    text-align center
+    text-decoration none
+  div
+    &.img
+      margin-bottom 20px
+  div
+    &.price
+      display flex
+      margin-bottom 15px
+      button
+        reset-button()
+        font('SFUIDisplay', 21px, 25px, 400, #ffffff)
+        
+        flex-grow 1
+        
+        text-align center
+        
+        background-color #26bb38
+        
+        border-radius 5px
+        
+        transition 0.2s ease
+        &:hover
+          background-color #20a12f
+      div
+        display flex
+        justify-content flex-end
+        width 145px
+        margin-right 23px
+        p
+          reset()
+          font('SFUIDisplay', 48px, 57px, 700, #6a3df7)
+          &:nth-child(2)
+            align-self flex-end
+            margin-left 5px
+            
+            font-size 29px
+            line-height 34px
+            font-weight 400
+            
+            transform translateY(-7px)
+  div
+    &.weight
+      position absolute
+      top -25px
+      left 0
+      right 0
+      
+      display flex
+      justify-content center
+      margin auto
+      p
+        reset()
+        font('SFUIDisplay', 29px, 34px, 400, #222222)
+        
+        position relative
+        
+        box-sizing border-box
+        width 150px
+        margin 0 8px
+        padding: 2px 0;
+        padding-top: 4px;
+        
+        text-align center
+        
+        background-color #ffffff
+        
+        border 1px solid #1fc2ca
+        border-radius 5px
+        &::before
+          font('SFUIDisplay', 16px, 19px, 400, #222222)
+
+          content 'Выберите вес:'
+
+          position absolute
+          top -27px
+          left 0
+          right 0
+
+          margin auto
+
+          text-align center
+      button
+        reset-button()
+        
+        position relative
+        
+        width 43px
+        height 45px
+        
+        background-color #1fc2ca
+        
+        border-radius 5px
+        
+        transition 0.2s ease
+        &:active
+          background-color #189ea5
+        &::before,
+        &::after
+          center-absolute()
+          
+          content ''
+          
+          width 61%
+          height 2px
+          
+          background-color #cff2f4
+        &::before
+          transform rotate(90deg)
+        &.minus
+          &::before
+            display none
+            
+@media(max-width 375px)
+  .good div.price div
+    width 115px
+    
+@media(max-width 320px)
+  .good div.price div
+    width: 95px;
+    margin-right: 12px;
+            
+            
+            
+            

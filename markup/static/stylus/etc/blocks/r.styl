@@ -1,0 +1,167 @@
+.r
+  h2
+    reset()
+    font('Circe', 37px, 44px, 700, #222222)
+    
+    margin-bottom 38px
+    
+    text-align center
+    
+.r__slider-wrap
+  box-sizing border-box
+  width 1000px
+  min-height 284px
+  margin 0 auto
+  margin-bottom 92px
+  padding-top 27px
+  padding-left 37px
+  padding-right 37px
+  
+  background-image url('%=static=%content/r-bg.png')
+  background-repeat no-repeat
+  background-size cover
+  
+.r__slider
+  position relative
+  .owl-nav
+    center-absolute()
+    
+    display flex
+    justify-content space-between
+    height 32px
+  .owl-nav
+    left -170px
+    right -152px
+    
+    height 80px
+  .owl-prev,
+  .owl-next
+    width 80px
+    height 80px
+    
+    background #fff9ee !important
+    
+    border-radius 50% !important
+    &:hover
+      background #fff9ee !important
+      span
+        &::before,
+        &::after
+          background #6a47f3
+    span
+      center-absolute()
+      
+      width 25px
+      height 42px
+      &::before
+        top 14px
+      &::after
+        top -14px
+  .owl-dots
+    transform: translateY(95px);
+  .owl-dot
+    &.active
+      span
+        background #ea1f4b !important
+  
+.r__slider-slide
+  display flex
+  align-items center
+  
+.r__slider-slide-bl
+  display flex
+  flex-direction column
+  align-items center
+  width 160px
+  margin-right 45px
+  p
+    reset()
+    font('Circe', 24px, 29px, 700, #222222)
+    
+    text-align center
+  div
+    &.img
+      width 128px
+  ul
+    reset-list()
+    
+    display flex
+    margin-bottom 12px
+    li
+      bgi(24px, 24px)
+      
+      margin-right 6px
+      
+      background-image url('%=static=%content/star.svg')
+      &:last-child
+        margin-right 0
+        
+.r__slider-slide-br
+  p
+    reset()
+    font('SFUIDisplay', 19px, 23px, 400, #747474)
+    
+@media(max-width 1280px)
+  .r__slider-wrap
+    width: auto;
+    min-height: auto;
+    background-image: none;
+    margin-bottom: 15px;
+    
+  .r__slider .owl-nav
+    position: static;
+    justify-content: space-around;
+    
+  .r__slider .owl-dots
+    display: none;
+    
+  .r__slider-wrap
+    padding 0
+    
+  .r h2
+    margin-bottom: 10px;
+    
+@media(max-width 790px)
+  .r__slider-slide
+    flex-direction column
+    
+  .r__slider-slide-bl
+    margin-right 0
+    
+@media(max-width 480px)
+  .r h2
+    font-size: 23px;
+    line-height: 27px;
+    margin-bottom: 5px;
+    
+  .r__slider-slide-br p
+    font-size: 15px;
+    line-height: 19px;
+    
+  .r__slider .owl-nav
+    height: 40px;
+    margin-top: 20px;
+    
+  .r__slider
+    .owl-prev,
+    .owl-next
+      width: 40px;
+      height: 40px;
+      
+  .r__slider .owl-prev span, .r__slider .owl-next span
+    width: 15px;
+    height: 32px;
+    
+  .r__slider .owl-prev span::before, .r__slider .owl-next span::before
+    top: 9px;
+    
+  .r__slider .owl-prev span::after, .r__slider .owl-next span::after
+    top: -9px;
+    
+  
+        
+        
+        
+        
+        
+        

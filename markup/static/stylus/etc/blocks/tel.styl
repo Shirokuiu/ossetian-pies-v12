@@ -1,0 +1,178 @@
+.tel
+  position absolute
+  top 0
+  right 0
+  z-index 10
+  
+  width 325px
+  padding-bottom 28px
+  
+  background-color #f4403c
+  a
+    &.num
+      font('LetoSans', 29px, 34px, 700, #ffffff)
+      
+      display block
+      padding-top 14px
+      padding-bottom 10px
+      
+      text-align center
+      text-decoration none
+      
+      border-bottom 1px solid #f88175
+      
+.tel__content
+  display flex
+  flex-direction column
+  align-items center
+  padding-top 12px
+  ul
+    reset-list()
+    
+    display flex
+    li
+      margin-right 4px
+      
+      background-color #ffffff
+      a
+        reset()
+        bgi(24px, 24px)
+        &::after
+          display none
+      &:nth-child(1)
+        a
+          background-image url('%=static=%content/vk.svg')
+      &:nth-child(2)
+        a
+          background-image url('%=static=%content/fb.svg')
+      &:nth-child(3)
+        a
+          background-image url('%=static=%content/od.svg')
+      &:nth-child(4)
+        a
+          background-image url('%=static=%content/g.svg')
+      &:nth-child(5)
+        a
+          background-image url('%=static=%content/tw.svg')
+      &:nth-child(6)
+        a
+          background-image url('%=static=%content/v.svg')
+      &:nth-child(7)
+        a
+          background-image url('%=static=%content/wa.svg')
+      &:last-child
+        margin-right 0
+  p
+    reset()
+    font('HelveticaNeueCyr', 17px, 20px, 400, #ffffff)
+    
+    text-align center
+    &.delivery
+      margin-bottom 45px
+    &.order
+      margin-bottom 30px
+  a
+    font('HelveticaNeueCyr', 17px, 20px, 400, #f5f5f5)
+        
+    position relative
+    display inline-block
+    margin-left 5px
+    margin-bottom 33px
+    padding-bottom 3px
+
+    text-decoration none
+
+    transition 0.3s ease
+    &::after
+      content ''
+
+      position absolute
+      left 0
+      bottom 0
+
+      width 100%
+      height 1px
+
+      background-color #ffffff
+
+      transition 0.3s ease
+    &:hover
+      color #ffffff
+      &::after
+        width 0
+
+        opacity 0
+        
+@media(max-width 1770px)        
+  .tel
+    position: static;
+    width: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    
+  .tel a.num
+    padding: 0;
+    border-bottom: none;
+    margin-right: 5%;
+    
+  .tel__content
+    padding: 0;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  .tel__content a
+    margin: 0;
+    
+  .tel__content p.delivery
+    margin: 0;
+    
+  .tel__content p.order
+    margin: 0;
+    
+@media(max-width 1460px)
+  .tel
+    padding: 15px;
+    
+  .tel a.num
+    margin-right: 1%;
+    
+@media(max-width 1370px)
+  .tel a.num
+    font-size: 20px;
+    line-height: 24px;
+    
+  .tel__content a
+    font-size: 14px;
+    line-height: 18px;
+    
+  .tel__content p
+    font-size: 14px;
+    line-height: 18px;
+    
+@media(max-width 1170px)
+  .tel__content ul
+    display none
+    
+@media(max-width 940px)
+  .tel
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    width: 230px;
+    z-index: 25;
+    
+  .tel__content
+    display: none;
+    
+@media(max-width 320px)
+  .tel a.num
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 0;
+        
+        
+        
+        
+        

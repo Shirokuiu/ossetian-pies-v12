@@ -1,0 +1,158 @@
+.feat
+  margin-bottom 22px
+  padding-top 38px
+  padding-bottom 22px
+  
+  border-top 1px solid #dcdcdc
+  border-bottom 1px solid #dcdcdc
+  ul
+    reset-list()
+    
+    display flex
+    justify-content space-between
+    padding 0 4%
+    li
+      width 380px
+      p
+        &.text
+          reset()
+          font('SFUIDisplay', 17px, 20px, 400, #3a3a3a)
+
+          position relative
+          &::before
+            content ''
+
+            position absolute
+            top 0
+            left -35px
+            bottom 0
+
+            width 11px
+            height 11px
+            margin auto
+
+            background-color #f4403c
+
+            transform rotate(45deg)
+      h2
+        reset()
+        font('SFUIDisplay', 29px, 34px, 700, #f73e34)
+        
+        margin-bottom 20px
+        span
+          margin-left 5px
+
+          color #6a3df7
+      div
+        position relative
+        
+        margin 0 auto
+        margin-bottom 45px
+        &::after
+          content ''
+          
+          position absolute
+          left 0
+          right 0
+          bottom -27px
+          
+          width 50px
+          height 5px
+          margin auto
+          
+          background-color #fef035
+        img
+          height 100px
+        span
+          &.img-icon
+            position absolute
+            top: -12px;
+            right: -57px;
+            
+            display block
+            width 60px
+            height 60px
+            
+            background-color #fc471e
+            
+            border-radius 50%
+            span
+              font('SFUIDisplay', 27px, 40px, 700, #ffffff)
+              
+              display block
+              
+              text-align center
+              &:nth-child(2)
+                font-size 19px
+                line-height 0
+                font-weight 400
+      &:nth-child(1)
+        div
+          width 100px
+      &:nth-child(2)
+        div
+          width 128px
+      &:nth-child(3)
+        div
+          width 100px
+      &:nth-child(4)
+        div
+          width 100px
+          img
+            transform: translateX(-38px);
+        h2
+          color #6a3df7
+          span
+            color #f73e34
+            
+@media(max-width 1730px)
+  .feat ul
+    flex-wrap wrap
+    
+  .feat ul li
+    margin-bottom: 20px;
+    
+@media(max-width 860px)
+  .feat ul
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    
+  .feat ul li
+    margin-bottom: 30px;
+    
+  .feat ul li p.text
+    text-align center
+    
+@media(max-width 500px)
+  .feat ul li p.text::before
+    display none
+    
+@media(max-width 480px)
+  .feat
+    padding-top: 8px;
+    padding-bottom: 0;
+    
+  .feat ul li:nth-child(1) div
+    margin-bottom: 18px;
+    
+  .feat ul li div::after
+    bottom: -9px;
+    
+  .feat ul li h2
+    margin-bottom: 5px;
+    text-align center
+    
+  .feat ul li
+    width auto
+    
+@media(max-width 320px)
+  .feat ul li h2
+    font-size: 23px;
+    line-height: 27px;
+          
+          
+          
+          
+          
+          

@@ -1,0 +1,238 @@
+.t-basket
+  padding-bottom: 6px;
+  
+  border-top 1px solid #dcdcdc
+
+.t-basket__content
+  max-width 1400px
+  margin 0 auto
+  div
+    &.row-t
+      display flex
+      p
+        reset()
+        font('Circe', 17px, 20px, 400, #3a3a3a)
+        
+        padding 15px 0
+        
+        text-align center
+        &:nth-child(1)
+          width: 35.72%;
+        &:nth-child(2)
+          width: 21.8%;
+        &:nth-child(3)
+          width: 145px;
+        &:nth-child(4)
+          box-sizing border-box
+          width: 31.43%;
+          padding-left 80px
+          
+          text-align left
+  div
+    &.row-c
+      display flex
+      padding 5px 0
+      
+      background-color #ffffff
+      &:nth-child(2n)
+        background-color #fdf5e7
+      div
+        &.sum
+          display flex
+          justify-content space-around
+          align-items center
+          width: 31.43%;
+          button
+            reset-button()
+            
+            width 29px
+            height 30px
+            .exit
+              width 29px
+              height 30px
+              
+              fill #dcdcdc
+              
+              transition 0.2s ease
+            &:hover
+              .exit
+                fill #f4403c
+          div
+            display flex
+            align-items center
+            p
+              reset()
+              font('Circe', 24px, 29px, 400, #3a3a3a)
+              &:nth-child(2)
+                margin-left 5px
+
+                transform translateY(1px)
+      div
+        &.calculate
+          display flex
+          justify-content space-between
+          align-items center
+          width: 145px;
+          p
+            reset()
+            font('Circe', 29px, 36px, 400, #222222)
+            
+            box-sizing border-box
+            width 39px
+            height 35px
+            
+            text-align center
+            
+            background-color #ffffff
+            
+            border 1px solid #1fc2ca
+            border-radius 5px
+          button
+            reset-button()
+            
+            position relative
+            
+            width 43px
+            height 39px
+            
+            background-color #1fc2ca
+            
+            border-radius 5px
+            
+            transition 0.2s ease
+            &::before,
+            &::after
+              center-absolute()
+              
+              content ''
+              
+              width 58%
+              height 2px
+              
+              background-color #cff2f4
+            &::before
+              transform rotate(90deg)
+            &.minus
+              &::before
+                display none
+            &:active
+              background-color #189ea5
+      div
+        &.price
+          display flex
+          justify-content center
+          align-items center
+          width: 21.8%;
+          p
+            reset()
+            font('Circe', 24px, 29px, 400, #3a3a3a)
+            &:nth-child(2)
+              margin-left 5px
+              
+              transform translateY(1px)
+      div
+        &.title
+          display flex
+          align-items center
+          width: 35.72%;
+          p
+            reset()
+            font('Circe', 24px, 29px, 400, #3a3a3a)
+            
+            margin-left 30px
+            
+@media(max-width 860px)
+  .t-basket__content div.row-c div.title p
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 10px;
+    
+  .t-basket__content div.row-c div.price p
+    font-size: 19px;
+    line-height: 23px;
+    
+  .t-basket__content div.row-c div.price p:nth-child(2)
+    font-size: 16px;
+    line-height: 20px;
+    
+  .t-basket__content div.row-c div.calculate
+    width: 115px;
+    
+  .t-basket__content div.row-t p:nth-child(3)
+    width: 115px;
+    
+  .t-basket__content div.row-c div.calculate button
+    width: 33px;
+    height: 29px;
+    
+  .t-basket__content div.row-c div.calculate button::before, .t-basket__content div.row-c div.calculate button::after
+    width: 44%;
+    
+  .t-basket__content div.row-c div.calculate p
+    width: 29px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 27px;
+    
+  .t-basket__content div.row-c div.sum div p
+    font-size: 19px;
+    line-height: 23px;
+    
+  .t-basket__content div.row-c div.sum div p:nth-child(2)
+    font-size: 17px;
+    line-height: 21px;
+    
+  .t-basket__content div.row-t p:nth-child(4)
+    padding-left: 0;
+    text-align: center;
+    
+@media(max-width 650px)
+  .t-basket
+    .container
+      padding: 0;
+      
+  .t-basket__content div.row-t
+    display none
+    
+  .t-basket__content div.row-c
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    
+  .t-basket__content div.row-c div.title
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    
+  .t-basket__content div.row-c div.title p
+    margin-left: 0;
+    
+  .t-basket__content div.row-c div.price
+    width: 100%;
+    margin-bottom: 10px;
+    
+  .t-basket__content div.row-c div.calculate
+    margin-bottom: 15px;
+    
+  .t-basket__content div.row-c div.sum button
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    
+@media(max-width 480px)
+  .t-basket__content div.row-c
+    padding-top: 36px;
+    
+  .t-basket__content div.row-c div.title p
+    text-align center
+            
+            
+            
+            
+            
+            
+            

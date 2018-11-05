@@ -1,0 +1,206 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          .page-header__con
+            .tel
+              a.num(href="tel:74951001510") +7 (495) 100-15-10
+              .tel__content
+                a(href="#") Заказать обратный звонок
+                p.delivery Доставка заказов с 9:00 до 21:00
+                p.order Заявки с сайта принимаются круглосуточно
+                ul
+                  - for (let i = 0; i < 7; i++) 
+                    li
+                      a(href="#")
+            .page-header__t
+              .container
+                ul
+                  each items in[{icon:'placeholder',link:'Москва',text:{status:false}},{icon:'factory',link:'О компании',text:{status:false}},{icon:'delivery-truck',link:'доставка',text:{status:true,title:'Бесплатная'}},{icon:'discount-voucher',link:'Акции',text:{status:false}},{icon:'wallet',link:'оплата',text:{status:true,title:'Удобная'}},{icon:'like',link:'отзывы',text:{status:true,title:'Честные'}}]
+                    li
+                      if !(items.text.status)
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: '' + items.icon})
+                        a(href="#")= items.link
+                      else
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: '' + items.icon})
+                        div
+                          p= items.text.title
+                          a(href="#")= items.link
+                .bas
+                  div
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: 'icon', className: 'icon'})
+                    p 12
+                  a(href="#") Корзина
+            .page-header__m
+              .container
+                .page-header__m-b
+                  .log.log--header
+                    p.title Сеть мини пекарен в Москве
+                    .log__img
+                      .log__img-wrap
+                        img(src="%=static=%img/content/waffle.svg" alt="Картинка")
+                      h2 ЮЖНАЯ ОСЕТИЯ
+                    p.work Работаем для вас с 1992 года
+                .page-header__m-b
+                  .page-header__m-b-slider.owl-carousel.owl-theme.reset-owl
+                    - for (let i = 0; i < 4; i++)
+                      .page-header__m-b-slider-slide
+                        div
+                          img(src="%=static=%img/content/fast-delivery.svg" alt="Картинка")
+                        h2 Быстрая доставка осетинских пирогов
+                .page-header__m-b
+                  each items in ['Акция дня!','-10%','В ДЕНЬ РОЖДЕНИЯ']
+                    p.discount= items
+          .page-header__b
+            nav
+              .page-header__b-slider.owl-carousel.owl-theme.reset-owl
+                - for (let i = 0; i < 2; i++)
+                  each items in [{link:'Все пироги',active:true},{link:'С капустой',active:false},{link:'С сыром',active:false},{link:'С картошкой',active:false},{link:'С рыбой',active:false},{link:'С курицей',active:false},{link:'С фасолью',active:false},{link:'Сладкие',active:false},{link:'Постные',active:false},{link:'Овощные',active:false}]
+                    .page-header__b-slider-slide
+                      if !(items.active)
+                        a(href="#")= items.link
+                      else
+                        a.active(href="#")= items.link
+            .border
+        main.page-content
+          .bp
+            .container
+              ul
+                li
+                  a(href="#") Главная
+                li
+                  span /
+                  a(href="#") Корзина
+          .tit.tit--basket
+            .container
+              h2 Корзина
+          .t-basket
+            .container
+              .t-basket__content
+                div.row-t
+                  each items in ['Наименование','Цена','Количество','Сумма']
+                    p= items
+                - for (let i = 0; i < 4; i++)
+                  div.row-c
+                    div.title
+                      p= (i + 1) + '. Осетинский пирог с говядиной и грибами'
+                    div.price
+                      p.price-js 650
+                      p руб.
+                    div.calculate
+                      button.minus(type="button")
+                      p 1
+                      button.plus(type="button")
+                    div.sum
+                      div
+                        p.total-table-price-js
+                        p руб.
+                      button(type="button")
+                        != pugHelpers.Icon.call(locals, {iconName: 'exit', className: 'exit'})
+          form.fom(action="action.php" method="post")
+            .fom__rt
+              .container
+                .fom__totPrice
+                  p.text Итого:
+                  div
+                    p.total-price-js 5620
+                    p руб.
+                h2 Заполните данные по заказу:
+                ul.input
+                  each items, index in [{input:{type:'text',placeholder:'Ваше имя'},textarea:{status:false}},{input:{type:'tel',placeholder:'Номер телефона'},textarea:{status:false}},{input:{type:'text',placeholder:'Адрес доставки'},textarea:{status:false}},{textarea:{status:true,placeholder:'Комментарий к заказу'}}]
+                    li
+                      if !(items.textarea.status)
+                        input(type="" + items.input.type placeholder="" + items.input.placeholder)
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: 'fom-icon' + (index + 1), className: 'fom-icon' + (index + 1)})
+                      else
+                        textarea(placeholder="" + items.textarea.placeholder)
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: 'fom-icon' + (index + 1), className: 'fom-icon' + (index + 1)})
+                ul.prefer
+                  each items in [{input:{check:true},text:'Меньше соли'},{input:{check:false},text:'Меньше перца'},{input:{check:false},text:'У меня День рождения (получить скидку 10%)'}]
+                    li
+                      if items.input.check
+                        input(type="checkbox" checked)
+                        p= items.text
+                        span.check
+                      else
+                        input(type="checkbox")
+                        p= items.text
+                        span
+            .fom__rb
+              .container
+                .fom__totPrice
+                  p.text Итого к оплате:
+                  div
+                    p.total-price-sale-js 5620
+                    p руб.
+                div.button
+                  button(type="submit") Оформить заказ
+                div.privacy
+                  input(type="checkbox" checked)
+                  span.check
+                  p Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки
+                    a(href="#") персональных данных
+
+      footer.page-footer
+        .footer-content
+          .footer-content__t
+            .footer-content__t-bl
+              .footer-content__t-bl-content
+                .log.log--footer
+                  p.title Сеть мини пекарен в Москве
+                  .log__img
+                    .log__img-wrap
+                      img(src="%=static=%img/content/waffle.svg" alt="Картинка")
+                    h2 ЮЖНАЯ ОСЕТИЯ
+                  p.work Работаем для вас с 1992 года
+                .address
+                  a.metro(href="#") м. Авиамоторная
+                  p.address Москва, Авиамоторная 6
+                  .footer-content__t-bl-payment-wrap
+                    h3 Способы оплаты:
+                    ul
+                      - for (let i = 0; i < 2; i++)
+                        li
+            .footer-content__t-br
+              .footer-content__t-br-rt
+                ul
+                  each items in ['О компании','Доставка','Акции','Отзывы','Оплата','Контакты']
+                    li
+                      a(href="#")= items
+              .footer-content__t-br-rb
+                h3 Разнообразные начинки осетинских пирогов:
+                div
+                  - for (let i = 0; i < 3; i++)
+                    ul
+                      each items in ['Пироги с говядиной','Пироги с сыром','Пироги с капустой','Пироги с картофелем']
+                        li
+                          a(href="#")= items
+              .footer-content__yandex
+                span
+          .footer-content__b
+            .footer-content__b-bl
+              p © 2018 Осетинские пироги Южная Осетия
+            .footer-content__b-br
+              a(href="#")
+                span Создание и продвижение сайтов
+                span
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

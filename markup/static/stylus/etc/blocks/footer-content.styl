@@ -1,0 +1,367 @@
+.footer-content__t
+  display flex
+  
+.footer-content__t-bl
+  box-sizing border-box
+  display flex
+  flex-direction column
+  align-items center
+  width 450px
+  padding-top 45px
+  padding-bottom 28px
+  
+  background-color #5e3fc1
+  
+.footer-content__t-bl-content
+  p
+    &.address
+      reset()
+      font('SFUIDisplay', 19px, 23px, 400, #d8bfd8)
+      
+      margin-bottom 30px
+  a
+    &.metro
+      font('SFUIDisplay', 19px, 23px, 400, #a08fd3)
+      
+      text-decoration none
+      
+      transition 0.2s ease
+      &:hover
+        color #fff200
+        
+.footer-content__t-bl-payment-wrap
+  display flex
+  align-items center
+  h3
+    reset()
+    font('SFUIDisplay', 19px, 23px, 400, #d8bfd8)
+    
+    margin-right 11px
+  ul
+    reset-list()
+    
+    display flex
+    li
+      bgi(32px, 20px)
+      
+      margin-right 10px
+      &:nth-child(1)
+        background-image url('%=static=%content/visa.png')
+      &:nth-child(2)
+        background-image url('%=static=%content/mastercard.png')
+      &:last-child
+        margin-right 0
+        
+.footer-content__t-br
+  flex-grow 1
+  padding-top 45px
+  padding-left: 5%;
+  padding-right 8px
+  
+  background-color #4a2fa6
+  
+.footer-content__t-br-rt
+  margin-bottom 17px
+  ul
+    reset-list()
+    
+    display flex
+    justify-content space-between
+    padding-left 5px
+    padding-right: 7%;
+    padding-bottom 22px
+    
+    border-bottom 1px solid #6a5eca
+    li
+      a
+        font('SFUIDisplay', 21px, 25px, 700, #a08fd3)
+        
+        padding-bottom 2px
+        
+        text-decoration none
+        
+        transition 0.3s ease
+        &:hover
+          color #fff200
+      &:nth-child(3)
+        a
+          position relative
+          
+          color #fff200
+          &::after
+            content ''
+            
+            position absolute
+            left 0
+            bottom 0
+            
+            width 100%
+            height 1px
+            
+            background-color #fff200
+            
+            transition 0.3s ease
+          &:hover
+            color #ffffff
+            &::after
+              width 0
+              
+              opacity 0
+              
+.footer-content__t-br-rb
+  margin-bottom 12px
+  padding-left 5px
+  h3
+    reset()
+    font('SFUIDisplay', 19px, 23px, 400, #d8bfd8)
+    
+    margin-bottom 20px
+  div
+    display flex
+    ul
+      reset-list()
+      
+      margin-right 9%
+      &:last-child
+        margin-right 0
+      li
+        margin-bottom 15px
+        a
+          font('SFUIDisplay', 19px, 23px, 400, #a08fd3)
+          
+          text-decoration none
+          
+          transition 0.2s ease
+          &:hover
+            color #fff200
+        &:last-child
+          margin-bottom 0
+          
+.footer-content__yandex
+  display flex
+  justify-content flex-end
+  padding-right: 14.1%;
+  span
+    bgi(88px, 31px)
+    
+    background-image url('%=static=%content/ym.jpg')
+    
+.footer-content__b
+  display flex
+  
+  border-top 1px solid #6a5eca
+  
+.footer-content__b-bl
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  width 450px
+  padding 20px 0
+  
+  background-color #5e3fc1
+  p
+    reset()
+    font('SFUIDisplay', 15px, 18px, 400, #ffffff)
+    
+.footer-content__b-br
+  box-sizing border-box
+  flex-grow 1
+  display flex
+  justify-content flex-end
+  padding-right: 9.9%;
+  
+  background-color #4a2fa6
+  a
+    display flex
+    align-items center
+    
+    text-decoration none
+    span
+      &:nth-child(1)
+        font('SFUIDisplay', 15px, 18px, 400, #a08fd3)
+        
+        margin-right 14px
+        
+        transition 0.2s ease
+      &:nth-child(2)
+        bgi(142px, 40px)
+        
+        background-image url('%=static=%content/developers.png')
+    &:hover
+      span
+        &:nth-child(1)
+          color #fff200
+          
+@media(max-width 1200px)
+  .footer-content__t-bl
+    padding-top: 25px;
+    align-items: flex-start;
+    padding-left: 20px;
+    
+  .footer-content__t-br
+    padding-top: 25px;
+    padding-left: 1%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  .footer-content__t-br-rt ul
+    padding-right: 1px;
+    padding-left: 0;
+    
+  .footer-content__t-br-rb
+    padding-left: 0;
+    
+  .footer-content__yandex
+    margin-top: auto;
+    margin-bottom: 22px;
+    padding-right: 0;
+    
+  .footer-content__b-bl
+    align-items: flex-start;
+    
+  .footer-content__b-bl p
+    padding-left: 20px;
+    
+  .footer-content__b-br
+    padding-right: 20px;
+    
+  .footer-content__t-bl
+    width: 339px
+    
+  .footer-content__b-bl
+    width: 339px
+    
+@media(max-width 1000px)
+  .footer-content__t
+    flex-direction: column;
+    
+  .footer-content__t-bl
+    width: 100%;
+    box-sizing: border-box;
+    padding-right 20px
+    
+  .footer-content__t-bl-content
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    div
+      &.address
+        display: flex;
+        flex-direction: column;
+      
+  .footer-content__t-bl-payment-wrap
+    margin-top: auto;
+    
+  .footer-content__b-bl
+    background-color #4a2fa6
+    
+@media(max-width 760px)
+  .footer-content__b
+    background-color: #4a2fa6;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 16px;
+    
+@media(max-width 670px)
+  .footer-content__t-br
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    
+  .footer-content__t-br-rt ul
+    flex-direction: column;
+    align-items: center;
+    padding-bottom 12px
+    
+  .footer-content__t-br-rt ul li
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 0
+    
+  .footer-content__t-br-rb div ul
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 0
+    
+  .footer-content__t-br-rb div ul li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+  .footer-content__t-br-rb h3
+    text-align: center;
+    
+  .footer-content__t-br-rb div
+    flex-direction: column;
+    align-items: center;
+    
+  .footer-content__t-br-rb div ul
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  .footer-content__yandex
+    justify-content center
+    
+@media(max-width 590px)
+  .footer-content__t-bl
+    padding: 15px 0;
+    
+  .footer-content__t-bl-content
+    flex-direction: column;
+    
+  .footer-content__t-bl-content a.metro
+    text-align: center;
+    margin-bottom: 5px;
+    
+  .footer-content__t-bl-content p.address
+    text-align: center;
+    margin-bottom: 10px;
+    
+  .footer-content__t-bl-payment-wrap
+    justify-content: center;
+    
+@media(max-width 420px)
+  .footer-content__b-bl
+    padding-top: 15px;
+    
+  .footer-content__b-br
+    padding-right: 0;
+    
+  .footer-content__b-br a
+    flex-direction: column;
+    
+  .footer-content__b-br a span:nth-child(1)
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+  .footer-content__t-br-rb h3
+    padding 0 10px
+    
+@media(max-width 320px)
+  .footer-content__b-bl
+    width: auto;
+    padding: 15px 10px;
+    text-align: center;
+    
+  .footer-content__b-bl p
+    padding-left: 0;
+    font-size: 13px;
+    line-height: 17px;
+          
+          
+          
+          
+          
+          
+          
+          
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,88 @@
+.re__content
+  ul
+    &.list
+      reset-list()
+      
+      margin-bottom 60px
+      li
+        &.items
+          margin-bottom 60px
+          &:nth-child(2n)
+            .r__slider-wrap
+              background-image url('%=static=%content/r-bg.png')
+          &:last-child
+            margin-bottom 0
+  .r__slider-wrap
+    min-height: 300px;
+    margin-bottom 0
+    padding-left: 57px;
+    
+    background-image url('%=static=%content/r-bg-reverse.png')
+    background-size 100% 100%
+    .r__slider-slide-bl
+      div
+        &.date
+          span
+            font('Circe', 19px, 23px, 400, #222222)
+    .r__slider-slide-br
+      div
+        &.likes
+          display flex
+          justify-content flex-end
+          align-items center
+          margin-top 30px
+          padding-right: 60px;
+          div
+            display flex
+            align-items center
+            span
+              &:nth-child(1)
+                display block
+                width 17px
+                height 18px
+                margin-right 7px
+                
+                cursor pointer
+                .like1
+                  width 17px
+                  height 18px
+                  
+                  fill #93ec94
+                  
+                  transition 0.2s ease
+                &:hover
+                  .like1
+                    fill #26bb38
+              &:nth-child(2)
+                font('SFUIDisplay', 16px, 19px, 700, #4f4f4f)
+          span
+            &.text
+              font('SFUIDisplay', 15px, 18px, 400, #303030)
+              
+              margin-right 15px
+              
+@media(max-width 1280px)
+  .re__content .r__slider-wrap
+    min-height auto
+    
+    background-image none
+    
+  .re__content ul.list li.items:nth-child(2n) .r__slider-wrap
+    background-image none
+    
+  .re__content ul.list li.items
+    margin-bottom 30px
+    
+@media(max-width 790px)
+  .re__content .r__slider-wrap
+    padding 0
+    
+@media(max-width 480px)
+  .re__content .r__slider-wrap .r__slider-slide-br div.likes
+    margin-top: 10px;
+    padding-right: 0;
+              
+              
+              
+              
+              

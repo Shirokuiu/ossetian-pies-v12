@@ -1,0 +1,148 @@
+.ev
+  margin-bottom 45px
+  padding 42px 0
+  
+  border-top 1px solid #dcdcdc
+  border-bottom 1px solid #dcdcdc
+  
+.ev__content
+  display flex
+  padding 0 5%
+  ul
+    reset-list()
+
+    display flex
+    flex-direction column
+    margin-right: 6.6%;
+    &:last-child
+      margin-right 0
+    li
+      position relative
+
+      margin-bottom 42px
+      padding-left 29px
+      &::before
+        content ''
+
+        position absolute
+        top 0
+        left 0
+        bottom 0
+
+        width 11px
+        height 11px
+        margin auto
+
+        background-color #f4403c
+
+        transform rotate(45deg)
+      &:last-child
+        margin-bottom 0
+      div
+        &.row
+          display flex
+          align-items center
+          div
+            position relative
+
+            display flex
+            align-items center
+            margin-left 8px
+            span
+              &:nth-child(1)
+                font('SFUIDisplay', 19px, 23px, 400, #3a3a3a)
+
+                display block
+                padding-right: 77px;
+              &:nth-child(2)
+                font('SFUIDisplay', 27px, 65px, 700, #ffffff)
+
+                position absolute
+                top 0
+                right 0
+                bottom 0
+
+                display block
+                width 65px
+                height 65px
+                margin auto
+
+                text-align center
+
+                background-color #fc471e
+
+                border-radius 50%
+      a
+        font('SFUIDisplay', 19px, 23px, 400, #6a47f3)
+
+        transition 0.2s ease
+        &:hover
+          color #f73e34
+          
+@media(max-width 1370px)
+  .ev__content
+    padding 0
+    flex-wrap wrap
+    justify-content space-between
+    
+@media(max-width 1210px)
+  .ev__content
+    justify-content flex-start
+    
+  .ev__content ul
+    margin-bottom 15px
+    
+@media(max-width 750px)
+  .ev
+    padding: 38px 0;
+    padding-bottom: 10px;
+    
+  .ev
+    .container
+      display: flex;
+      justify-content: center;
+      
+  .ev__content
+    flex-direction: column;
+    
+  .ev__content ul
+    margin-right: 0;
+    
+@media(max-width 550px)
+  .ev__content ul li div.row
+    flex-direction: column;
+    align-items: flex-start;
+    
+  .ev__content ul li div.row div
+    margin-left: 0;
+    margin-top: 10px;
+    
+@media(max-width 480px)
+  .ev
+    margin-bottom: 15px;
+    
+@media(max-width 420px)
+  .ev
+    padding-top: 20px;
+    
+  .ev__content ul li
+    margin-bottom: 12px;
+    
+  .ev__content ul li div.row div span:nth-child(1)
+    padding-right: 57px;
+    
+  .ev__content ul li div.row div span:nth-child(2)
+    width: 45px;
+    height: 45px;
+    font-size: 17px;
+    line-height: 47px;
+  
+  
+  
+  
+  
+  
+  
+          
+          
+          

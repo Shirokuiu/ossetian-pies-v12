@@ -1,0 +1,281 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          .page-header__con
+            .tel
+              a.num(href="tel:74951001510") +7 (495) 100-15-10
+              .tel__content
+                a(href="#") Заказать обратный звонок
+                p.delivery Доставка заказов с 9:00 до 21:00
+                p.order Заявки с сайта принимаются круглосуточно
+                ul
+                  - for (let i = 0; i < 7; i++) 
+                    li
+                      a(href="#")
+            .page-header__t
+              .container
+                ul
+                  each items in[{icon:'placeholder',link:'Москва',text:{status:false}},{icon:'factory',link:'О компании',text:{status:false}},{icon:'delivery-truck',link:'доставка',text:{status:true,title:'Бесплатная'}},{icon:'discount-voucher',link:'Акции',text:{status:false}},{icon:'wallet',link:'оплата',text:{status:true,title:'Удобная'}},{icon:'like',link:'отзывы',text:{status:true,title:'Честные'}}]
+                    li
+                      if !(items.text.status)
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: '' + items.icon})
+                        a(href="#")= items.link
+                      else
+                        span
+                          != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: '' + items.icon})
+                        div
+                          p= items.text.title
+                          a(href="#")= items.link
+                .bas
+                  div
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: 'icon', className: 'icon'})
+                    p 0
+                  a(href="#") Корзина
+            .page-header__m
+              .container
+                .page-header__m-b
+                  .log.log--header
+                    p.title Сеть мини пекарен в Москве
+                    .log__img
+                      .log__img-wrap
+                        img(src="%=static=%img/content/waffle.svg" alt="Картинка")
+                      h2 ЮЖНАЯ ОСЕТИЯ
+                    p.work Работаем для вас с 1992 года
+                .page-header__m-b
+                  .page-header__m-b-slider.owl-carousel.owl-theme.reset-owl
+                    - for (let i = 0; i < 4; i++)
+                      .page-header__m-b-slider-slide
+                        div
+                          img(src="%=static=%img/content/fast-delivery.svg" alt="Картинка")
+                        h2 Быстрая доставка осетинских пирогов
+                .page-header__m-b
+                  each items in ['Акция дня!','-10%','В ДЕНЬ РОЖДЕНИЯ']
+                    p.discount= items
+          .page-header__b
+            nav
+              .page-header__b-slider.owl-carousel.owl-theme.reset-owl
+                - for (let i = 0; i < 2; i++)
+                  each items in [{link:'Все пироги',active:true},{link:'С капустой',active:false},{link:'С сыром',active:false},{link:'С картошкой',active:false},{link:'С рыбой',active:false},{link:'С курицей',active:false},{link:'С фасолью',active:false},{link:'Сладкие',active:false},{link:'Постные',active:false},{link:'Овощные',active:false}]
+                    .page-header__b-slider-slide
+                      if !(items.active)
+                        a(href="#")= items.link
+                      else
+                        a.active(href="#")= items.link
+            .border
+                  
+        main.page-content
+          .tit
+            .container
+              h2 Осетинские пироги в Москве с доставкой
+              p Заказать осетинские пироги в Москве с доставкой можно с 8:00 до 21:00 по телефону +7 (495) 324-90-00 или круглосуточно на сайте через корзину. На ваш выбор мы предлагаем услуги 4 пекарен, в которых выпекаются осетинские пироги на любой вкус - сладкие, мясные, с капустой, сырные и другие. Заказ осетинских пирогов в Москве с доставкой на дом и в офис выполняется оперативно: приготовление занимает 25-45 минут, а доставка точно ко времени за 45 минут!
+          .goods
+            .container
+              .goods__content
+                - for (let i = 0; i < 4; i++)
+                  .good
+                    div.weight(data-price-min="500" data-price-middle="700" data-price-max="900" data-weight-min="1000 г" data-weight-middle="1200 г" data-weight-max="1400 г")
+                      button.minus(type="button")
+                      p.val-weight-js
+                      button.plus(type="button")
+                    div.img
+                      img(src="%=static=%img/content/good-img.png" alt="Картинка")
+                    div.price
+                      div.price-wrap
+                        p.price-js
+                        p руб.
+                      button(type="button") В корзину
+                    a(href="#") Осетинский пирог с говядиной и грибами
+                    div.calculation
+                      button.minus(type="button")
+                      div
+                        p.val-js 1
+                        p шт
+                      button.plus(type="button")
+          .goods
+            .container
+              .tit
+                h2 Осетинские пироги с говядиной
+              .goods__content
+                - for (let i = 0; i < 4; i++)
+                  .good
+                    div.weight(data-price-min="500" data-price-middle="700" data-price-max="900" data-weight-min="1000 г" data-weight-middle="1200 г" data-weight-max="1400 г")
+                      button.minus(type="button")
+                      p.val-weight-js
+                      button.plus(type="button")
+                    div.img
+                      img(src="%=static=%img/content/good-img.png" alt="Картинка")
+                    div.price
+                      div.price-wrap
+                        p.price-js
+                        p руб.
+                      button(type="button") В корзину
+                    a(href="#") Осетинский пирог с говядиной и грибами
+                    div.calculation
+                      button.minus(type="button")
+                      div
+                        p.val-js 1
+                        p шт
+                      button.plus(type="button")
+              
+          .tit.tit--margin-mod1
+            .container
+              h2 Наши преимущества
+          .feat
+            .container
+              ul
+                each items, index in [{h2:'Качественные',span:'продукты',p:'Мы готовим осетинские пироги только из высококачественных продуктов.',imgSpan:{status:false}},{h2:'Бесплатная',span:'доставка',p:'При заказе на сумму не менее 1 000 руб. Доставка пирогов в подарок!',imgSpan:{status:true,text1:'45',text2:'мин'}},{h2:'Традиционные',span:'рецепты',p:'Наши пекари Осетины и создали коллекцию проверенных, уникальных рецептов.',imgSpan:{status:false}},{h2:'Привезем',span:'горячие пироги',p:'Пироги к клиенту всегда доставляется в горячем виде, в специальных термосумках.',imgSpan:{status:false}}]
+                  li
+                    if !(items.imgSpan.status)
+                      div
+                        img(src="%=static=%img/content/feat-img" + (index + 1) + '.svg' alt="Картинка")
+                      h2= items.h2
+                        span= items.span
+                      p.text= items.p
+                    else
+                      div
+                        img(src="%=static=%img/content/feat-img" + (index + 1) + '.svg' alt="Картинка")
+                        span.img-icon
+                          span= items.imgSpan.text1
+                          span= items.imgSpan.text2
+                      h2= items.h2
+                        span= items.span
+                      p.text= items.p
+          .tit
+            .container
+              h2 Осетинские пироги в Москве для любых событий
+              p Заказать осетинские пироги в Москве с доставкой можно с 8:00 до 21:00 по телефону +7 (495) 324-90-00 или круглосуточно на сайте через корзину. На ваш выбор мы предлагаем услуги 4 пекарен, в которых выпекаются осетинские пироги на любой вкус - сладкие, мясные, с капустой, сырные и другие. Заказ осетинских пирогов в Москве с доставкой на дом и в офис выполняется оперативно: приготовление занимает 25-45 минут, а доставка точно ко времени за 45 минут!
+          .ev
+            .container
+              .ev__content
+                ul
+                  li
+                    div.row
+                      a(href="#") На День рождения
+                      div
+                        span предоставляется скидка
+                        span 10%
+                  li
+                    a(href="#") На Новый Год
+                ul
+                  li
+                    a(href="#") На корпоратив
+                  li
+                    a(href="#") На свадьбу
+                ul
+                  li
+                    a(href="#") На Юбилей
+                  li
+                    a(href="#") На работу
+                ul
+                  li
+                    a(href="#") На Рождество
+                  li
+                    a(href="#") На свадьбу
+          .r
+            .container
+              h2 Отзывы наших клиентов
+              .r__slider-wrap
+                .r__slider.owl-carousel.owl-theme.reset-owl
+                  - for (let i = 0; i < 4; i++)
+                    .r__slider-slide
+                      .r__slider-slide-bl
+                        ul
+                          - for (let i = 0; i < 5; i++)
+                            li
+                        div.img
+                          img(src="%=static=%img/content/user.svg" alt="Картинка")
+                        p Алексей
+                      .r__slider-slide-br
+                        p Заказала сегодня в офис 5 пирогов по случаю дня рождения - привезли вовремя, все очень вежливые, а пироги просто объедение - горячие, начинки много, все вкусное и свежее, особенно понравились пироги со шпинатом и с лососем. Коллеги в восторге, взяли у меня Ваши контакты - будут тоже заказывать :) И я теперь буду заказывать только у Вас. Спасибо Вам большое! День рождения удался:) Успехов Вам, удачи и процветания!
+          .hit
+            .container
+              h2 Хиты продаж
+            .hit__content
+              .container
+                .hit__slider-wrap
+                  .hit__slider.owl-carousel.owl-theme.reset-owl
+                    - for (let i = 0; i < 16; i++)
+                      .hit__slider-slide
+                        .good
+                          div.weight(data-price-min="500" data-price-middle="700" data-price-max="900" data-weight-min="1000 г" data-weight-middle="1200 г" data-weight-max="1400 г")
+                            button.minus(type="button")
+                            p.val-weight-js
+                            button.plus(type="button")
+                          div.img
+                            img(src="%=static=%img/content/good-img.png" alt="Картинка")
+                          div.price
+                            div.price-wrap
+                              p.price-js
+                              p руб.
+                            button(type="button") В корзину
+                          a(href="#") Осетинский пирог с говядиной и грибами
+                          div.calculation
+                            button.minus(type="button")
+                            div
+                              p.val-js 1
+                              p шт
+                            button.plus(type="button")
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__t
+            .footer-content__t-bl
+              .footer-content__t-bl-content
+                .log.log--footer
+                  p.title Сеть мини пекарен в Москве
+                  .log__img
+                    .log__img-wrap
+                      img(src="%=static=%img/content/waffle.svg" alt="Картинка")
+                    h2 ЮЖНАЯ ОСЕТИЯ
+                  p.work Работаем для вас с 1992 года
+                .address
+                  a.metro(href="#") м. Авиамоторная
+                  p.address Москва, Авиамоторная 6
+                  .footer-content__t-bl-payment-wrap
+                    h3 Способы оплаты:
+                    ul
+                      - for (let i = 0; i < 2; i++)
+                        li
+            .footer-content__t-br
+              .footer-content__t-br-rt
+                ul
+                  each items in ['О компании','Доставка','Акции','Отзывы','Оплата','Контакты']
+                    li
+                      a(href="#")= items
+              .footer-content__t-br-rb
+                h3 Разнообразные начинки осетинских пирогов:
+                div
+                  - for (let i = 0; i < 3; i++)
+                    ul
+                      each items in ['Пироги с говядиной','Пироги с сыром','Пироги с капустой','Пироги с картофелем']
+                        li
+                          a(href="#")= items
+              .footer-content__yandex
+                span
+          .footer-content__b
+            .footer-content__b-bl
+              p © 2018 Осетинские пироги Южная Осетия
+            .footer-content__b-br
+              a(href="#")
+                span Создание и продвижение сайтов
+                span
+                  
+              
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')
